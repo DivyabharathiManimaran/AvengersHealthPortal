@@ -1,0 +1,154 @@
+{
+    "patientList": [
+        {
+            "lastName": "Stark",
+            "firstName": "Tony",
+            "alternateName":"Iron man",
+            "gender":"Male",
+            "phone": "245-732-4455",
+            "address":"Stark industries, LA",
+            "admitCardNumber": 432,
+            "abilities":[]
+        },
+        {
+            "lastName": "",
+            "firstName": "Thor",
+            "alternateName":"",
+            "gender":"Male",
+            "phone": "422-123-4400",
+            "address":"Asgard",
+            "admitCardNumber": 320,
+            "abilities":[]
+        },
+        {
+            "lastName": "Romanoff",
+            "firstName": "Natasha",
+            "alternateName":"",
+            "gender":"Female",
+            "phone": "200-620-0011",
+            "address":"12, 230rd St, LA",
+            "admitCardNumber": 200,
+            "abilities": [
+                "Military Tactics",
+                "Expert spy",
+                "hand-to-hand combatant",
+                "Grappling hook",
+                "Radio transmitter",
+                "Expert marksman",
+                "Explosives",
+                "Taser", "Knock out gas"
+            ]
+        },
+        {
+            "lastName": "Banner",
+            "firstName": "Bruce",
+            "alternateName":"Hulk",
+            "gender":"Male",
+            "phone": "245-732-4455",
+            "address":"1040 Eldorado Ave.,Clearwater, Florida",
+            "admitCardNumber": 204,
+            "abilities":[],
+            "height":"5 ft 9 in",
+            "weight": "128 lbs"
+        },
+        {
+            "lastName": "",
+            "firstName": "Hulk",
+            "gender":"Male",
+            "phone": "245-732-4455",
+            "address":"1040 Eldorado Ave.,Clearwater, Florida",
+            "admitCardNumber": 204,
+            "abilities":[],
+            "height":"5 ft 9 in",
+            "weight": "128 lbs"
+        },
+        {
+            "lastName": "",
+            "firstName": "Hulk",
+            "gender":"Male",
+            "phone": "245-732-4455",
+            "address":"1040 Eldorado Ave.,Clearwater, Florida",
+            "admitCardNumber": 204,
+            "abilities":[],
+            "height":"5 ft 9 in",
+            "weight": "128 lbs"
+        },
+        {
+            "lastName": "",
+            "firstName": "Hulk",
+            "gender":"Male",
+            "phone": "245-732-4455",
+            "address":"1040 Eldorado Ave.,Clearwater, Florida",
+            "admitCardNumber": 204,
+            "abilities":[],
+            "height":"5 ft 9 in",
+            "weight": "128 lbs"
+        },
+        {
+            "lastName": "",
+            "firstName": "Hulk",
+            "gender":"Male",
+            "phone": "245-732-4455",
+            "address":"1040 Eldorado Ave.,Clearwater, Florida",
+            "admitCardNumber": 204,
+            "abilities":[],
+            "height":"5 ft 9 in",
+            "weight": "128 lbs"
+        },
+        {
+            "lastName": "",
+            "firstName": "Hulk",
+            "gender":"Male",
+            "phone": "245-732-4455",
+            "address":"1040 Eldorado Ave.,Clearwater, Florida",
+            "admitCardNumber": 204,
+            "abilities":[],
+            "height":"5 ft 9 in",
+            "weight": "128 lbs"
+        },
+        {
+            "lastName": "",
+            "firstName": "Hulk",
+            "gender":"Male",
+            "phone": "245-732-4455",
+            "address":"1040 Eldorado Ave.,Clearwater, Florida",
+            "admitCardNumber": 204,
+            "abilities":[],
+            "height":"5 ft 9 in",
+            "weight": "128 lbs"
+        },
+        {
+            "lastName": "",
+            "firstName": "Hulk",
+            "gender":"Male",
+            "phone": "245-732-4455",
+            "address":"1040 Eldorado Ave.,Clearwater, Florida",
+            "admitCardNumber": 204,
+            "abilities":[],
+            "height":"5 ft 9 in",
+            "weight": "128 lbs"
+        },
+        {
+            "lastName": "",
+            "firstName": "Hulk",
+            "gender":"Male",
+            "phone": "245-732-4455",
+            "address":"1040 Eldorado Ave.,Clearwater, Florida",
+            "admitCardNumber": 204,
+            "abilities":[],
+            "height":"5 ft 9 in",
+            "weight": "128 lbs"
+        },
+        {
+            "lastName": "",
+            "firstName": "Hulk",
+            "gender":"Male",
+            "phone": "245-732-4455",
+            "address":"1040 Eldorado Ave.,Clearwater, Florida",
+            "admitCardNumber": 204,
+            "abilities":[],
+            "height":"5 ft 9 in",
+            "weight": "128 lbs"
+        }
+    ]
+}

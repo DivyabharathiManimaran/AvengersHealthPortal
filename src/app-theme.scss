@@ -1,0 +1,9 @@
+@import '~@angular/material/theming';
+// @import './app//home-component//home-componet.theme.scss';
+@include mat-core();
+$custom-theme-primary: mat-palette($mat-teal, 300);
+$custom-theme-accent:mat-palette($mat-grey, 700);
+$custom-theme-warn: mat-palette($mat-red);
+$custom-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
+@include angular-material-theme($custom-theme);
+// @include home-component-theme-mixin($custom-theme-primary,$custom-theme-accent,$custom-theme-warn);

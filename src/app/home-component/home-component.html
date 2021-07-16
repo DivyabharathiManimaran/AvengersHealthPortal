@@ -1,0 +1,119 @@
+<div fxFlexFill fxLayout="column" class="scroll-container">
+    <div fxLayoutAlign ="start center" class="header primary-color-theme">
+        <img alt="Avengers pportal logo" src="../../assets/images/logo.jpg"/>
+        <div> Avengers Health Portal </div>
+    </div>
+    <div fxFlex fxLayout="column" class="body-bg scroll-container">
+        <form [formGroup]="patientSearchForm">
+        <mat-card class="card-padding">
+            <div fxLayoutAlign ="center" class="sub-heading"> Search with Patient Admit card number or Name or Phone number</div>
+            <div fxLayout="row" fxLayoutAlign ="center center">
+                <div fxLayout="row"  fxLayoutGap="20px">
+                    <div fxLayout="column">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Admit card number</mat-label>
+                            <input
+                            autocomplete="off"
+                            matInput 
+                            placeholder = "Enter search text"
+                            type="text"      
+                            formControlName="admitNo"          
+                            />
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="column">
+                        <mat-form-field appearance="outline">
+                            <mat-label>First name</mat-label>
+                            <input
+                            autocomplete="off"
+                            matInput 
+                            placeholder = "Enter search text"
+                            type="text"      
+                            formControlName="fName"          
+                            />
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="column">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Last name</mat-label>
+                            <input
+                            autocomplete="off"
+                            matInput 
+                            placeholder = "Enter search text"
+                            type="text"      
+                            formControlName="lName"          
+                            />
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="column">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Phone</mat-label>
+                            <input
+                            autocomplete="off"
+                            matInput 
+                            placeholder = "Enter search text"
+                            type="text"      
+                            formControlName="phone"          
+                            />
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row">
+                    <button class="primary-color-theme button-margin"
+                    (click)="search()" 
+                    mat-raised-button> Search</button>
+                    <button class="button-margin"
+                    (click)="clear()"
+                    mat-raised-button> Clear</button>
+                </div>
+            </div>
+        </mat-card>
+        </form>
+        <mat-card fxFlex fxLayout="column" class="card-padding scroll-container">
+            <div fxLayout="row" fxLayoutAlign ="center" class="sub-heading"> List of patients available</div>
+            <hr/>
+            <div fxLayout="column" fxFlex class="scroll-container">
+                <table fxFlex mat-table [dataSource]="dataSource" class="scroll-container patient-table">
+            
+                    <ng-container matColumnDef="admitNo">
+                        <th mat-header-cell *matHeaderCellDef> Admit card no </th>
+                        <td mat-cell *matCellDef="let element">{{ element.admitCardNumber }}</td>
+                    </ng-container>
+            
+                    <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                        <td mat-cell *matCellDef="let element"> {{ element.firstName}} {{ element.lastName }} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="altName">
+                        <th mat-header-cell *matHeaderCellDef> Alternate name </th>
+                        <td mat-cell *matCellDef="let element"> {{ element.alternateName || '-' }} </td>
+                    </ng-container>
+            
+                    <ng-container matColumnDef="gender">
+                        <th mat-header-cell *matHeaderCellDef> Gender</th>
+                        <td mat-cell *matCellDef="let element"> {{ element.gender }} </td>
+                    </ng-container>
+                    
+                    <ng-container matColumnDef="phone">
+                        <th mat-header-cell *matHeaderCellDef> Phone</th>
+                        <td mat-cell *matCellDef="let element"> {{ element.phone }} </td>
+                    </ng-container>
+            
+                    <ng-container matColumnDef="address">
+                        <th mat-header-cell *matHeaderCellDef> Address </th>
+                        <td mat-cell *matCellDef="let element"> {{ element.address }} </td>
+                    </ng-container>
+            
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns; let i = index"></tr>
+                </table>
+            </div>
+
+        </mat-card>
+    </div>
+    <div fxLayoutAlign ="space-between start" class="footer primary-color-theme">
+        <div>Fouder: Nick Furry</div>
+        <div>{{ currentTime }}</div>
+    </div>
+</div>
