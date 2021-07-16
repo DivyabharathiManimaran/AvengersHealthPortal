@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home-component/home-component';
 import { HomeComponentService } from './home-component/service/home-component.service';
 import { MemberDetailComponent } from './home-component/member-detail/member-detail.component';
+import { OnlynumberDirective } from './home-component/directives/numberOnly.directive';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { MemberDetailComponent } from './home-component/member-detail/member-det
     AppComponent,
     HomeComponent,
     MemberDetailComponent,
+    OnlynumberDirective,
   ],
   imports: [
     BrowserModule,
