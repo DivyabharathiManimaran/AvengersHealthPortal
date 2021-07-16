@@ -38,7 +38,7 @@ $myApp-theme: mat.define-light-theme((
 
 .card-padding {
   margin: 8px;
-  padding: 16px 0;
+  padding: 16px 0 !important;
 }
 .scroll-container {
   overflow-y: auto;

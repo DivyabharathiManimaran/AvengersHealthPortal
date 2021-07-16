@@ -13,53 +13,68 @@
                         <mat-form-field appearance="outline">
                             <mat-label>Admit card number</mat-label>
                             <input
+                            autofocus
+                            numbersOnly
                             autocomplete="off"
                             matInput 
                             placeholder = "Enter search text"
                             type="text"      
-                            formControlName="admitNo"          
+                            formControlName="admitNo"
+                            #admitNum
+                            (input)="admitNumChange(admitNum.value)"
                             />
+                            <mat-error *ngIf="getForm.admitNo.errors?.pattern">Enter only number.</mat-error>
                         </mat-form-field>
                     </div>
                     <div fxLayout="column">
                         <mat-form-field appearance="outline">
                             <mat-label>First name</mat-label>
                             <input
+                            charOnly
                             autocomplete="off"
-                            matInput 
+                            matInput
+                            maxlength="25"
                             placeholder = "Enter search text"
                             type="text"      
                             formControlName="fName"          
                             />
+                            <mat-error *ngIf="getForm.fName.errors?.pattern">Allowed . and -</mat-error>
                         </mat-form-field>
                     </div>
                     <div fxLayout="column">
                         <mat-form-field appearance="outline">
                             <mat-label>Last name</mat-label>
                             <input
+                            charOnly
                             autocomplete="off"
                             matInput 
+                            maxlength="25"
                             placeholder = "Enter search text"
                             type="text"      
                             formControlName="lName"          
                             />
+                            <mat-error *ngIf="getForm.lName.errors?.pattern">Allowed . and -</mat-error>
+
                         </mat-form-field>
                     </div>
                     <div fxLayout="column">
                         <mat-form-field appearance="outline">
                             <mat-label>Phone</mat-label>
                             <input
+                            numbersOnly
                             autocomplete="off"
                             matInput 
                             placeholder = "Enter search text"
                             type="text"      
                             formControlName="phone"          
                             />
+                            <mat-error *ngIf="getForm.phone.errors?.pattern">Enter only number.</mat-error>
                         </mat-form-field>
                     </div>
                 </div>
                 <div fxLayout="row">
                     <button class="primary-color-theme button-margin"
+                    [disabled]="patientSearchForm.invalid"
                     (click)="search()" 
                     mat-raised-button> Search</button>
                     <button class="button-margin"
