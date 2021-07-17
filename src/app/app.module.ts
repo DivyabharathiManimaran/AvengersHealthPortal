@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox'
 import { MatTableModule } from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,8 @@ import { HomeComponent } from './home-component/home-component';
 import { HomeComponentService } from './home-component/service/home-component.service';
 import { MemberDetailComponent } from './home-component/member-detail/member-detail.component';
 import { OnlynumberDirective } from './home-component/directives/numberOnly.directive';
+import { SearchInfoDialogComponent } from './home-component/search-info-dialog/search-info-dialog.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -24,6 +27,7 @@ import { OnlynumberDirective } from './home-component/directives/numberOnly.dire
     HomeComponent,
     MemberDetailComponent,
     OnlynumberDirective,
+    SearchInfoDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +37,8 @@ import { OnlynumberDirective } from './home-component/directives/numberOnly.dire
     MatCheckboxModule,
     MatCardModule,
     MatTableModule,
+    MatDialogModule,
+    MatTooltipModule,
     HttpClientModule,
     FlexLayoutModule,
     MatFormFieldModule,
@@ -42,6 +48,7 @@ import { OnlynumberDirective } from './home-component/directives/numberOnly.dire
   ],
   exports: [MemberDetailComponent],
   providers: [HomeComponentService],
+  entryComponents: [SearchInfoDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

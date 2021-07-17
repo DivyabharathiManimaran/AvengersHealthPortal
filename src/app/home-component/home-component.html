@@ -1,8 +1,8 @@
 <div fxFlexFill fxLayout="column" class="scroll-container">
     <div fxLayoutAlign ="start center" class="header primary-color-theme">
-        <img alt="Avengers pportal logo" src="../../assets/images/logo.jpg"/>
+        <img alt="Avengers pportal logo" src="../../assets/images/logo.jpg" (click) = homeComponentService.goToHome()/>
         <div> Avengers Health Portal </div>
-    </div>
+    </div>   
     <div fxFlex fxLayout="column" class="body-bg scroll-container">
         <form [formGroup]="patientSearchForm">
         <mat-card class="card-padding">
@@ -21,7 +21,7 @@
                             type="text"      
                             formControlName="admitNo"
                             #admitNum
-                            (input)="admitNumChange(admitNum.value)"
+                            [(ngModel)]="admitCardNo"
                             />
                             <mat-error *ngIf="getForm.admitNo.errors?.pattern">Enter only number.</mat-error>
                         </mat-form-field>
@@ -36,7 +36,9 @@
                             maxlength="25"
                             placeholder = "Enter search text"
                             type="text"      
-                            formControlName="fName"          
+                            formControlName="fName"
+                            #firstName
+                            [(ngModel)]="firstNameVal"        
                             />
                             <mat-error *ngIf="getForm.fName.errors?.pattern">Allowed . and -</mat-error>
                         </mat-form-field>
@@ -51,7 +53,9 @@
                             maxlength="25"
                             placeholder = "Enter search text"
                             type="text"      
-                            formControlName="lName"          
+                            formControlName="lName"
+                            #lastName
+                            [(ngModel)]="lastNameVal"         
                             />
                             <mat-error *ngIf="getForm.lName.errors?.pattern">Allowed . and -</mat-error>
 
@@ -66,7 +70,9 @@
                             matInput 
                             placeholder = "Enter search text"
                             type="text"      
-                            formControlName="phone"          
+                            formControlName="phone"
+                            #phoneNum
+                            [(ngModel)]="phoneNo"        
                             />
                             <mat-error *ngIf="getForm.phone.errors?.pattern">Enter only number.</mat-error>
                         </mat-form-field>
@@ -74,9 +80,9 @@
                 </div>
                 <div fxLayout="row">
                     <button class="primary-color-theme button-margin"
-                    [disabled]="patientSearchForm.invalid"
+                    [disabled]="patientSearchForm.invalid || !(admitNum.value || firstName.value || lastName.value || phoneNum.value)"
                     (click)="search()" 
-                    mat-raised-button> Search</button>
+                    mat-raised-button mat-primary> Search</button>
                     <button class="button-margin"
                     (click)="clear()"
                     mat-raised-button> Clear</button>
@@ -84,10 +90,10 @@
             </div>
         </mat-card>
         </form>
-        <mat-card fxFlex fxLayout="column" class="card-padding scroll-container">
+        <mat-card fxLayout="column" class="card-padding scroll-container">
             <div fxLayout="row" fxLayoutAlign ="center" class="sub-heading"> List of patients available</div>
             <hr/>
-            <div fxLayout="column" fxFlex class="scroll-container">
+            <div fxLayout="column" fxFlex class="">
                 <table fxFlex mat-table [dataSource]="dataSource" class="scroll-container patient-table">
             
                     <ng-container matColumnDef="admitNo">
@@ -126,7 +132,7 @@
             </div>
 
         </mat-card>
-    </div>
+     </div>
     <div fxLayoutAlign ="space-between start" class="footer primary-color-theme">
         <div>Fouder: Nick Furry</div>
         <div>{{ currentTime }}</div>
