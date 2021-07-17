@@ -7,3 +7,12 @@ $custom-theme-warn: mat-palette($mat-red);
 $custom-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
 @include angular-material-theme($custom-theme);
 // @include home-component-theme-mixin($custom-theme-primary,$custom-theme-accent,$custom-theme-warn);
+
+.primary-color-theme {
+    background-color:  mat-color($custom-theme-primary);
+}
+
+.dialog-border {
+    border: 3px solid mat-color($custom-theme-warn);
+    border-radius: 10px;
+}
