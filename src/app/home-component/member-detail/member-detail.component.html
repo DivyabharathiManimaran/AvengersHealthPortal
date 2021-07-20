@@ -7,7 +7,13 @@
         <img class="home-icon" alt="home icon" src="assets/images/home.jpg"  (click) = homeComponentService.goToHome()/>
     </div>
     <div fxFlex fxLayout="column" class="body-bg scroll-container">
-        <h3>memberDetailsFor: {{memberDetailsFor}}</h3>
+        <mat-card fxLayoutAlign ="center center" class="card-padding inner-padding">
+            <img height="150" width="150" alt="patient image" [src]="item.picture"/>
+            <div class="member-name">
+                <div><label>Name: </label><b> {{ item.firstName }} {{ item.lastName }}</b></div>
+                <div *ngIf="item.alternateName"><label>Alternate name: </label> <b> {{ item.alternateName || '-' }} </b></div>
+            </div>
+        </mat-card>
     </div>
     <div fxLayoutAlign ="space-between start" class="footer primary-color-theme">
         <div>Fouder: Nick Furry</div>

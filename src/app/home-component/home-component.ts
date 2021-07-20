@@ -30,10 +30,10 @@ export  class HomeComponent implements AfterViewInit, OnInit{
         private readonly router: Router,
         private readonly fb: FormBuilder ) {
             this.patientSearchForm = this.fb.group({
-                admitNo:['', [Validators.pattern("^[0-9]*$")]],
+                admitNo:['', [Validators.pattern("[0-9]*$")]],
                 fName: ['',[Validators.pattern("[a-zA-Z][A-Za-z .-]*")]],
                 lName:['',[Validators.pattern("[a-zA-Z][A-Za-z .-]*")]],
-                phone:['', [Validators.pattern("^[0-9][0-9-]*$")]],
+                phone:['', [Validators.pattern("[0-9][0-9-]*$")]],
             });
         }
 
@@ -72,8 +72,9 @@ export  class HomeComponent implements AfterViewInit, OnInit{
 
     search() {
         let message='';
-        const record = this.dataSource.filter(item => item.firstName.toLowerCase() === this.firstNameVal || item.lastName?.toLowerCase() === this.lastNameVal || item.admitCardNumber.toString() === this.admitCardNo
-             || item.phone === this.phoneNo);
+        const record = this.dataSource.filter(item => item.firstName.toLowerCase() === this.firstNameVal.toLowerCase() || 
+        item.lastName?.toLowerCase() === this.lastNameVal || item.admitCardNumber.toString() === this.admitCardNo || 
+        item.phone === this.phoneNo);
              
        if(record.length == 1) {
             this.router.navigate(['details-page'], {state:{record:record[0]}}).catch(()=>{})
@@ -83,7 +84,7 @@ export  class HomeComponent implements AfterViewInit, OnInit{
             this.openErrDialog(message);
         }
         else if(record.length > 1) {
-            message = 'Multiple records found refine search criteria.';
+            message = 'Multiple records found, refine search criteria.';
             this.openErrDialog(message);
         }
     }
