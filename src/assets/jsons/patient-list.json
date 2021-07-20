@@ -8,6 +8,7 @@
             "phone": "245-732-4455",
             "address":"Stark industries, LA",
             "admitCardNumber": 432,
+            "picture":"https://th.bing.com/th/id/R.a9302147e7b6b1bb716894913fe28eb8?rik=gDdKQ1DCPeYQ6g&riu=http%3a%2f%2f173.203.60.6%2f%7enewbeardclinic%2fwp-content%2fuploads%2f2015%2f04%2ftony-stark-beard.jpg&ehk=LDqAC8UWb2y1VxKwCkV9NBlPruBf8TQaPUpYkRjIJuE%3d&risl=&pid=ImgRaw",
             "abilities":[]
         },
         {
@@ -23,7 +24,7 @@
         {
             "lastName": "Romanoff",
             "firstName": "Natasha",
-            "alternateName":"",
+            "alternateName":"Black widow",
             "gender":"Female",
             "phone": "200-620-0011",
             "address":"12, 230rd St, LA",
