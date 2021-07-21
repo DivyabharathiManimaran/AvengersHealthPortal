@@ -2,7 +2,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import * as moment from "moment";
 import { HomeComponentService } from "./service/home-component.service";
-import { PatientListArray, PatientListModel } from "./model/patient-list.model";
+import { MemberListArray, MemberListModel } from "./model/member-list.model";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
@@ -16,9 +16,9 @@ import { SearchInfoDialogComponent } from "./search-info-dialog/search-info-dial
 
 export  class HomeComponent implements AfterViewInit, OnInit{
     currentTime = moment().format("MM/DD/YYYY hh:mm A");
-    dataSource!: PatientListModel[];
+    dataSource!: MemberListModel[];
     displayedColumns = ['admitNo', 'name', 'altName', 'gender', 'phone', 'address'];
-    patientSearchForm !: FormGroup;
+    memberSearchForm !: FormGroup;
     admitCardNo!: string;
     firstNameVal!: string;
     lastNameVal!: string;
@@ -29,7 +29,7 @@ export  class HomeComponent implements AfterViewInit, OnInit{
         private dialog: MatDialog,
         private readonly router: Router,
         private readonly fb: FormBuilder ) {
-            this.patientSearchForm = this.fb.group({
+            this.memberSearchForm = this.fb.group({
                 admitNo:['', [Validators.pattern("[0-9]*$")]],
                 fName: ['',[Validators.pattern("[a-zA-Z][A-Za-z .-]*")]],
                 lName:['',[Validators.pattern("[a-zA-Z][A-Za-z .-]*")]],
@@ -38,9 +38,9 @@ export  class HomeComponent implements AfterViewInit, OnInit{
         }
 
     ngOnInit(){
-        this.homeComponentService.getPatList().subscribe((resp:PatientListArray) => {
-            if(resp && resp.patientList) {
-                this.dataSource = resp.patientList;
+        this.homeComponentService.getPatList().subscribe((resp:MemberListArray) => {
+            if(resp && resp.memberList) {
+                this.dataSource = resp.memberList;
             }
         })
         this.hasValue();
@@ -50,30 +50,17 @@ export  class HomeComponent implements AfterViewInit, OnInit{
     }
 
     get getForm(){
-        return this.patientSearchForm.controls;
+        return this.memberSearchForm.controls;
     }
 
     hasValue() {
-        console.log(this.patientSearchForm.value);
+        console.log(this.memberSearchForm.value);
     }
-
-    // admitNumChange(val: string) {
-    //     this.admitCardNo = val;
-    // }
-    // firstNameChange(val: string) {
-    //     this.firstNameVal = val;
-    // }
-    // lastNameChange(val: string) {
-    //     this.lastNameVal = val;
-    // }
-    // phoneNumChange(val: string) {
-    //     this.phoneNo = val;
-    // }
 
     search() {
         let message='';
-        const record = this.dataSource.filter(item => item.firstName.toLowerCase() === this.firstNameVal.toLowerCase() || 
-        item.lastName?.toLowerCase() === this.lastNameVal || item.admitCardNumber.toString() === this.admitCardNo || 
+        const record = this.dataSource.filter((item) => item.firstName.toLowerCase() === this.firstNameVal?.toLowerCase() || 
+        item.lastName?.toLowerCase() === this.lastNameVal?.toLowerCase() || item.admitCardNumber?.toString() === this.admitCardNo || 
         item.phone === this.phoneNo);
              
        if(record.length == 1) {
@@ -99,6 +86,6 @@ export  class HomeComponent implements AfterViewInit, OnInit{
     }
 
     clear() {
-        this.patientSearchForm.reset();
+        this.memberSearchForm.reset();
     }
 }

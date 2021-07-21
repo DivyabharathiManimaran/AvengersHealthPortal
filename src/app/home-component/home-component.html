@@ -4,9 +4,9 @@
         <div> Avengers Health Portal </div>
     </div>   
     <div fxFlex fxLayout="column" class="body-bg scroll-container">
-        <form [formGroup]="patientSearchForm">
-        <mat-card class="card-padding">
-            <div fxLayoutAlign ="center" class="sub-heading"> Search with Patient Admit card number or Name or Phone number</div>
+        <form [formGroup]="memberSearchForm">
+        <mat-card style="margin-bottom: 0;" class="card-padding">
+            <div fxLayoutAlign ="center" class="sub-heading"> Search with Member's Admit card number or Name or Phone number</div>
             <div fxLayout="row" fxLayoutAlign ="center center">
                 <div fxLayout="row"  fxLayoutGap="20px">
                     <div fxLayout="column">
@@ -80,7 +80,7 @@
                 </div>
                 <div fxLayout="row">
                     <button class="primary-color-theme button-margin"
-                    [disabled]="patientSearchForm.invalid || !(admitNum.value || firstName.value || lastName.value || phoneNum.value)"
+                    [disabled]="memberSearchForm.invalid || !(admitNum.value || firstName.value || lastName.value || phoneNum.value)"
                     (click)="search()" 
                     mat-raised-button mat-primary> Search</button>
                     <button class="button-margin"
@@ -90,11 +90,11 @@
             </div>
         </mat-card>
         </form>
-        <mat-card fxLayout="column" class="card-padding scroll-container">
-            <div fxLayout="row" fxLayoutAlign ="center" class="sub-heading"> List of patients available</div>
+        <mat-card fxFlex fxLayout="column" class="card-padding scroll-container">
+            <div fxLayout="row" fxLayoutAlign ="center" class="sub-heading"> List of Members available</div>
             <hr/>
-            <div fxLayout="column" fxFlex class="">
-                <table fxFlex mat-table [dataSource]="dataSource" class="scroll-container patient-table">
+            <div fxLayout="column" fxFlex class="scroll-container">
+                <table fxFlex mat-table [dataSource]="dataSource" class="scroll-container member-table">
             
                     <ng-container matColumnDef="admitNo">
                         <th mat-header-cell *matHeaderCellDef> Admit card no </th>
