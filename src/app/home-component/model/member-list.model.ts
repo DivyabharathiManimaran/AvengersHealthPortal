@@ -10,6 +10,18 @@ export interface MemberListModel {
     "abilities"?: Array<string>,
     "age": string,
     "dob": string,
+    "height"?: string,
+    "weight"?: string,
+    "selfOccupation"?:string,
+    "fatherName"?: string,
+    "fatherOccupation"?: string,
+    "motherName"?: string,
+    "motherOccupation"?: string,
+    "maritalStatus"?: string,
+    "spouseName"?:string,
+    "spouseOccupation"?: string,
+    "children"?: string
+
 }
 
 export interface MemberListArray {
