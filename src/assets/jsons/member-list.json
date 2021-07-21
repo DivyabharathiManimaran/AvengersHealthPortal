@@ -5,6 +5,8 @@
             "firstName": "Tony",
             "alternateName":"Iron man",
             "gender":"Male",
+            "age":"51",
+            "dob":"05/29/1970",
             "phone": "245-732-4455",
             "address":"Stark industries, LA",
             "admitCardNumber": 432,
