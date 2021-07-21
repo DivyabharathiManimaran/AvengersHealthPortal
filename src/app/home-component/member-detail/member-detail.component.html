@@ -16,45 +16,38 @@
         </mat-card>
         <mat-card fxFlex  fxLayout="column" class="scroll-container" fxLayoutAlign ="start stretch" style="margin: 8px; padding: 0;">
                 <mat-tab-group fxFlex  class="scroll-container">
-                    <mat-tab label="One">
-                      <h1>Some tab content</h1>
-                      <p>...</p>
-                      <h1>Some tab content</h1>
-                      <p>...</p>
-                      <h1>Some tab content</h1>
-                      <p>...</p>
-                      <h1>Some tab content</h1>
-                      <p>...</p>
-                      <h1>Some tab content</h1>
-                      <p>...</p>
-                      <h1>Some tab content</h1>
-                      <p>...</p>
-                      <h1>Some tab content</h1>
-                      <p>...</p>
-                      <h1>Some tab content</h1>
-                      <p>...</p>
-                      <h1>Some tab content</h1>
-                      <p>...</p>
-                      <h1>Some tab content</h1>
-                      <p>...</p>
-                      <h1>Some tab content</h1>
-                      <p>...</p>
-                      <h1>Some tab content</h1>
-                      <p>...</p>
-                      <h1>Some tab content</h1>
-                      <p>...</p>
+                    <mat-tab label="Information">
+                        <ng-template matTabContent>
+                            <div fxLayout="column" class="inner-padding">
+                                <div><label>Admit card number: </label><b> #{{ item.admitCardNumber }}</b></div>
+                                <div><label>Age: </label><b> {{ item.age }}</b></div>
+                                <div><label>DOB: </label> <b> {{ item.dob }} </b></div>
+                                <div><label>Gender: </label><b> {{ item.gender }}</b></div>
+                                <div><label>Address: </label> <b> {{ item.address }} </b></div>
+                                <div><label>Phone: </label> <b> {{ item.phone }} </b></div>
+                            </div>
+                          </ng-template>
                     </mat-tab>
                     <mat-tab label="Two">
-                      <h1>Some more tab content</h1>
-                      <p>...</p>
+                        <ng-template  matTabContent>
+                            <div  class="inner-padding">
+                            <h1>Some more tab content</h1>
+                            </div>
+                        </ng-template>
                     </mat-tab>
-                    <mat-tab label="three">
-                      <h1>Some more tab content</h1>
-                      <p>...</p>
+                    <mat-tab label="Three">
+                        <ng-template  matTabContent>
+                            <div  class="inner-padding">
+                            <h1>Some more tab content</h1>
+                            </div>
+                        </ng-template>
                     </mat-tab>
                     <mat-tab label="Four">
-                      <h1>Some more tab content</h1>
-                      <p>...</p>
+                        <ng-template  matTabContent>
+                            <div  class="inner-padding">
+                            <h1>Some more tab content</h1>
+                            </div>
+                        </ng-template>
                     </mat-tab>
                   </mat-tab-group>
         </mat-card>

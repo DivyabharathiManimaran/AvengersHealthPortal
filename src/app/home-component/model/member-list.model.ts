@@ -7,7 +7,9 @@ export interface MemberListModel {
     "phone": string,
     "address"?:string,
     "admitCardNumber": number,
-    "abilities"?: Array<string>
+    "abilities"?: Array<string>,
+    "age": string,
+    "dob": string,
 }
 
 export interface MemberListArray {
