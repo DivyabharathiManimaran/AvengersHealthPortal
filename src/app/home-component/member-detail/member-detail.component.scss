@@ -4,8 +4,10 @@
 }
 
 .inner-padding {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding: 24px;
+    div > div {
+        padding-bottom:12px;
+    }
 }
 
 .member-name {

@@ -15,6 +15,7 @@ export  class MemberDetailComponent implements OnInit{
     currentTime = moment().format("MM/DD/YYYY hh:mm A");
     memberDetailsFor = '';
     item !: MemberListModel;
+    picture = '';
     constructor(
         private readonly router: Router,
         readonly homeComponentService: HomeComponentService,) {}
@@ -24,7 +25,13 @@ export  class MemberDetailComponent implements OnInit{
             const record = history.state.record;
             this.memberDetailsFor = record.firstName;
             this.item = record;
+            this.picture = this.item.picture;
         }
+    }
+
+    setDefaultPic() {
+        if(this.item.gender?.toLowerCase() === 'female') this.picture = "assets/images/female-profile.jpg";
+        else this.picture = "assets/images/male-profile.jpg";
     }
 
     

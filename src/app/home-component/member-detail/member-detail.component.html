@@ -8,7 +8,8 @@
     </div>
     <div fxFlex fxLayout="column" class="body-bg scroll-container">
         <mat-card fxLayoutAlign ="center center" class="card-padding" style="margin-bottom: 0;">
-            <img height="150" width="150" alt="member image" [src]="item.picture"/>
+            <img height="150" width="150" alt="member image" [src]="picture"
+            (error)="setDefaultPic();"/>
             <div class="member-name">
                 <div><label>Name: </label><b> {{ item.firstName }} {{ item.lastName }}</b></div>
                 <div *ngIf="item.alternateName"><label>Alternate name: </label> <b> {{ item.alternateName || '-' }} </b></div>
@@ -18,20 +19,38 @@
                 <mat-tab-group fxFlex  class="scroll-container">
                     <mat-tab label="Information">
                         <ng-template matTabContent>
-                            <div fxLayout="column" class="inner-padding">
-                                <div><label>Admit card number: </label><b> #{{ item.admitCardNumber }}</b></div>
-                                <div><label>Age: </label><b> {{ item.age }}</b></div>
-                                <div><label>DOB: </label> <b> {{ item.dob }} </b></div>
-                                <div><label>Gender: </label><b> {{ item.gender }}</b></div>
-                                <div><label>Address: </label> <b> {{ item.address }} </b></div>
-                                <div><label>Phone: </label> <b> {{ item.phone }} </b></div>
+                            <div fxLayout="row" fxLayoutAlign="space-between start" class="inner-padding">
+                                <div>
+                                    <div><label>Admit card number: </label><b> #{{ item.admitCardNumber }}</b></div>
+                                    <div><label>Age: </label><b> {{ item.age }} Years</b></div>
+                                    <div><label>DOB: </label> <b> {{ item.dob }} </b></div>
+                                    <div><label>Gender: </label><b> {{ item.gender }}</b></div>
+                                    <div><label>Height: </label> <b> {{ item.height }} </b></div>
+                                    <div><label>Weight: </label><b> {{ item.weight }}</b></div>
+                                </div>
+                                <div>
+                                    <div><label>Address: </label> <b> {{ item.address }} </b></div>
+                                    <div><label>Phone: </label> <b> {{ item.phone }} </b></div>
+                                </div>                                
                             </div>
                           </ng-template>
                     </mat-tab>
-                    <mat-tab label="Two">
+                    <mat-tab label="Personal info">
                         <ng-template  matTabContent>
-                            <div  class="inner-padding">
-                            <h1>Some more tab content</h1>
+                            <div fxLayout="row" fxLayoutAlign="space-between start" class="inner-padding">
+                                <div>
+                                    <div><label>Occupation: </label><b> {{ item.selfOccupation || 'Unknown' }}</b></div>
+                                    <div><label>Marital status: </label> <b> {{ item.maritalStatus || 'Unknown' }} </b></div>
+                                    <div><label>Spouse/GF/BF name: </label><b> {{ item.spouseName  ? 'Ms. '+ item.spouseName : 'Unknown' }}</b></div>
+                                    <div><label>Occupation: </label><b> {{ item.spouseOccupation || 'Unknown' }}</b></div>
+                                    <div><label>Children: </label><b> {{ item.children || 'Unknown' }}</b></div>
+                                </div>
+                                <div>
+                                    <div><label>Father's name: </label><b> {{ item.fatherName ? 'Mr. '+ item.fatherName : 'Unknown' }}</b></div>
+                                    <div><label>Occupation: </label><b> {{ item.fatherOccupation || 'Unknown' }} </b></div>
+                                    <div><label>Mother's name: </label> <b> {{ item.motherName ? 'Ms. '+ item.motherName : 'Unknown' }} </b></div>
+                                    <div><label>Occupation: </label><b> {{ item.motherOccupation || 'Unknown' }}</b></div>
+                                </div>                             
                             </div>
                         </ng-template>
                     </mat-tab>
