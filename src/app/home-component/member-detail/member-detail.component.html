@@ -7,12 +7,56 @@
         <img class="home-icon" alt="home icon" src="assets/images/home.jpg"  (click) = homeComponentService.goToHome()/>
     </div>
     <div fxFlex fxLayout="column" class="body-bg scroll-container">
-        <mat-card fxLayoutAlign ="center center" class="card-padding inner-padding">
-            <img height="150" width="150" alt="patient image" [src]="item.picture"/>
+        <mat-card fxLayoutAlign ="center center" class="card-padding" style="margin-bottom: 0;">
+            <img height="150" width="150" alt="member image" [src]="item.picture"/>
             <div class="member-name">
                 <div><label>Name: </label><b> {{ item.firstName }} {{ item.lastName }}</b></div>
                 <div *ngIf="item.alternateName"><label>Alternate name: </label> <b> {{ item.alternateName || '-' }} </b></div>
             </div>
+        </mat-card>
+        <mat-card fxFlex  fxLayout="column" class="scroll-container" fxLayoutAlign ="start stretch" style="margin: 8px; padding: 0;">
+                <mat-tab-group fxFlex  class="scroll-container">
+                    <mat-tab label="One">
+                      <h1>Some tab content</h1>
+                      <p>...</p>
+                      <h1>Some tab content</h1>
+                      <p>...</p>
+                      <h1>Some tab content</h1>
+                      <p>...</p>
+                      <h1>Some tab content</h1>
+                      <p>...</p>
+                      <h1>Some tab content</h1>
+                      <p>...</p>
+                      <h1>Some tab content</h1>
+                      <p>...</p>
+                      <h1>Some tab content</h1>
+                      <p>...</p>
+                      <h1>Some tab content</h1>
+                      <p>...</p>
+                      <h1>Some tab content</h1>
+                      <p>...</p>
+                      <h1>Some tab content</h1>
+                      <p>...</p>
+                      <h1>Some tab content</h1>
+                      <p>...</p>
+                      <h1>Some tab content</h1>
+                      <p>...</p>
+                      <h1>Some tab content</h1>
+                      <p>...</p>
+                    </mat-tab>
+                    <mat-tab label="Two">
+                      <h1>Some more tab content</h1>
+                      <p>...</p>
+                    </mat-tab>
+                    <mat-tab label="three">
+                      <h1>Some more tab content</h1>
+                      <p>...</p>
+                    </mat-tab>
+                    <mat-tab label="Four">
+                      <h1>Some more tab content</h1>
+                      <p>...</p>
+                    </mat-tab>
+                  </mat-tab-group>
         </mat-card>
     </div>
     <div fxLayoutAlign ="space-between start" class="footer primary-color-theme">

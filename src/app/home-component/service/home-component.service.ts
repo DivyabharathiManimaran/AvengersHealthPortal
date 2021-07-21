@@ -7,12 +7,12 @@ import { Router } from "@angular/router";
 })
 
 export class HomeComponentService {
-    patientJsonString="assets/jsons/patient-list.json";
+    memberJsonString="assets/jsons/member-list.json";
     constructor( private readonly http: HttpClient,
         private readonly router: Router ) {}
 
     getPatList() {
-        return this.http.get(this.patientJsonString);
+        return this.http.get(this.memberJsonString);
     }
 
     goToHome() {

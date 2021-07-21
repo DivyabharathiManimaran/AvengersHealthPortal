@@ -1,4 +1,4 @@
-export interface PatientListModel {
+export interface MemberListModel {
     "lastName"?: string,
     "firstName": string,
     "alternateName"?: string,
@@ -10,6 +10,6 @@ export interface PatientListModel {
     "abilities"?: Array<string>
 }
 
-export interface PatientListArray {
-    "patientList"?: Array<PatientListModel>
+export interface MemberListArray {
+    "memberList"?: Array<MemberListModel>
 }

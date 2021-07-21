@@ -2,7 +2,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import * as moment from "moment";
-import { PatientListModel } from "../model/patient-list.model";
+import { MemberListModel } from "../model/member-list.model";
 import { HomeComponentService } from "../service/home-component.service";
 
 @Component({
@@ -14,7 +14,7 @@ import { HomeComponentService } from "../service/home-component.service";
 export  class MemberDetailComponent implements OnInit{
     currentTime = moment().format("MM/DD/YYYY hh:mm A");
     memberDetailsFor = '';
-    item !: PatientListModel;
+    item !: MemberListModel;
     constructor(
         private readonly router: Router,
         readonly homeComponentService: HomeComponentService,) {}
