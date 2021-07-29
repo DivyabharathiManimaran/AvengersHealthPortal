@@ -46,6 +46,9 @@ export  class HomeComponent implements AfterViewInit, OnInit{
         this.hasValue();
     }
     ngAfterViewInit() {
+        this.focusFirstEle();
+    }
+    focusFirstEle() {
         this.firstFormElement && this.firstFormElement.nativeElement && this.firstFormElement.nativeElement.focus();
     }
 
@@ -87,5 +90,6 @@ export  class HomeComponent implements AfterViewInit, OnInit{
 
     clear() {
         this.memberSearchForm.reset();
+        this.focusFirstEle();
     }
 }
