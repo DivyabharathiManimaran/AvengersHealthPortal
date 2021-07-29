@@ -6,9 +6,9 @@
     <div fxFlex fxLayout="column" class="body-bg scroll-container">
         <form [formGroup]="memberSearchForm">
         <mat-card style="margin-bottom: 0;" class="card-padding">
-            <div fxLayoutAlign ="center" class="sub-heading"> Search with Member's Admit card number or Name or Phone number</div>
-            <div fxLayout="row" fxLayoutAlign ="center center">
-                <div fxLayout="row"  fxLayoutGap="20px">
+            <div fxLayoutAlign ="center center" class="sub-heading"> Search with Member's Admit card number or Name or Phone number</div>
+            <div fxLayout="row wrap" fxLayoutAlign ="center center">
+                <div fxLayout="row wrap"  fxLayoutGap="20px">
                     <div fxLayout="column">
                         <mat-form-field appearance="outline">
                             <mat-label>Admit card number</mat-label>
@@ -17,7 +17,7 @@
                             numbersOnly
                             autocomplete="off"
                             matInput 
-                            placeholder = "Enter search text"
+                            placeholder = "000"
                             type="tel"      
                             formControlName="admitNo"
                             #admitNum
@@ -65,11 +65,12 @@
                         <mat-form-field appearance="outline">
                             <mat-label>Phone</mat-label>
                             <input
-                            numbersOnly
+                            phoneNumber
                             autocomplete="off"
                             matInput 
-                            placeholder = "Enter search text"
-                            type="tel"      
+                            placeholder = "000-000-0000"
+                            type="tel"
+                            maxlength="12" 
                             formControlName="phone"
                             #phoneNum
                             [(ngModel)]="phoneNo"        

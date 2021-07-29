@@ -20,6 +20,7 @@ import { MemberDetailComponent } from './home-component/member-detail/member-det
 import { OnlynumberDirective } from './home-component/directives/numberOnly.directive';
 import { SearchInfoDialogComponent } from './home-component/search-info-dialog/search-info-dialog.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { PhoneNumberDirective } from './home-component/directives/phoneNumber.directive';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     HomeComponent,
     MemberDetailComponent,
     OnlynumberDirective,
+    PhoneNumberDirective,
     SearchInfoDialogComponent,
   ],
   imports: [
