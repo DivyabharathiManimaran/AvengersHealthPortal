@@ -62,10 +62,60 @@ export  class HomeComponent implements AfterViewInit, OnInit{
 
     search() {
         let message='';
-        const record = this.dataSource.filter((item) => item.firstName.toLowerCase() === this.firstNameVal?.toLowerCase() || 
-        item.lastName?.toLowerCase() === this.lastNameVal?.toLowerCase() || item.admitCardNumber?.toString() === this.admitCardNo || 
-        item.phone === this.phoneNo);
-             
+        const record = [];
+        // this.dataSource.filter((item) => item.firstName.toLowerCase() === this.firstNameVal?.toLowerCase() || 
+        // item.lastName?.toLowerCase() === this.lastNameVal?.toLowerCase() || item.admitCardNumber?.toString() === this.admitCardNo || 
+        // item.phone === this.phoneNo);
+
+        for(const item of this.dataSource) {
+            const arr:MemberListModel[] =[];
+            arr[0] = item;
+           
+            /** One search field */
+            if(this.firstNameVal && !this.lastNameVal && !this.admitCardNo  && !this.phoneNo) {
+                const rec = arr.find( item => item.firstName.toLowerCase() === this.firstNameVal.toLowerCase());
+                if(rec) record.push(rec);
+            }
+            else if(!this.firstNameVal && this.lastNameVal && !this.admitCardNo  && !this.phoneNo) {
+                const rec = arr.find( item => item.lastName?.toLowerCase() === this.lastNameVal.toLowerCase());
+                if(rec) record.push(rec);
+            }
+            else if(!this.firstNameVal && !this.lastNameVal && this.admitCardNo && !this.phoneNo) {
+                const rec = arr.find( item => item.admitCardNumber.toString() === this.admitCardNo);
+                if(rec) record.push(rec);
+            }
+            else if(!this.firstNameVal && !this.lastNameVal && !this.admitCardNo  && this.phoneNo) {
+                const rec = arr.find( item => item.phone === this.phoneNo);
+                if(rec) record.push(rec);
+            }
+
+            /** Two search fields  */
+            else if(this.firstNameVal  && this.lastNameVal && !this.admitCardNo  && !this.phoneNo) {
+                const rec = arr.find( item => item.firstName.toLowerCase() === this.firstNameVal.toLowerCase() && item.lastName?.toLowerCase() === this.lastNameVal.toLowerCase());
+                if(rec) record.push(rec);
+            }
+            else if(this.firstNameVal  && !this.lastNameVal && this.admitCardNo && !this.phoneNo) {
+                const rec = arr.find( item => item.firstName.toLowerCase() === this.firstNameVal.toLowerCase() && item.admitCardNumber.toString() == this.admitCardNo);
+                if(rec) record.push(rec);
+            }
+            else if(this.firstNameVal  && !this.lastNameVal && !this.admitCardNo  && this.phoneNo) {
+                const rec = arr.find( item => item.firstName.toLowerCase() === this.firstNameVal.toLowerCase() && item.phone === this.phoneNo);
+                if(rec) record.push(rec);
+            }
+            else if(!this.firstNameVal && this.lastNameVal && this.admitCardNo && !this.phoneNo) {
+                const rec = arr.find( item => item.lastName?.toLowerCase() === this.lastNameVal.toLowerCase() && item.admitCardNumber.toString() === this.admitCardNo);
+                if(rec) record.push(rec);
+            }
+            else if(!this.firstNameVal && this.lastNameVal && !this.admitCardNo  && this.phoneNo) {
+                const rec = arr.find( item => item.lastName?.toString() === this.lastNameVal && item.phone == this.phoneNo);
+                if(rec) record.push(rec);
+            }
+            else if(!this.firstNameVal && !this.lastNameVal && this.admitCardNo && this.phoneNo) {
+                const rec = arr.find( item => item.admitCardNumber.toString() === this.admitCardNo && item.phone === this.phoneNo);
+                if(rec) record.push(rec);
+            }
+        }
+
        if(record.length == 1) {
             this.router.navigate(['details-page'], {state:{record:record[0]}}).catch(()=>{})
         }
