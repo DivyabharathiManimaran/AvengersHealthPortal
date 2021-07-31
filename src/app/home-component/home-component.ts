@@ -17,7 +17,7 @@ import { SearchInfoDialogComponent } from "./search-info-dialog/search-info-dial
 export  class HomeComponent implements AfterViewInit, OnInit{
     currentTime = moment().format("MM/DD/YYYY hh:mm A");
     dataSource!: MemberListModel[];
-    displayedColumns = ['admitNo', 'name', 'altName', 'gender', 'phone', 'address'];
+    displayedColumns = ['admitNo', 'fName', 'lName', 'gender', 'phone', 'address'];
     memberSearchForm !: FormGroup;
     admitCardNo!: string;
     firstNameVal!: string;
@@ -63,63 +63,126 @@ export  class HomeComponent implements AfterViewInit, OnInit{
     search() {
         let message='';
         const record = [];
-        // this.dataSource.filter((item) => item.firstName.toLowerCase() === this.firstNameVal?.toLowerCase() || 
-        // item.lastName?.toLowerCase() === this.lastNameVal?.toLowerCase() || item.admitCardNumber?.toString() === this.admitCardNo || 
-        // item.phone === this.phoneNo);
-
+        let error = false;
+        let recordItem;
         for(const item of this.dataSource) {
             const arr:MemberListModel[] =[];
             arr[0] = item;
-           
-            /** One search field */
-            if(this.firstNameVal && !this.lastNameVal && !this.admitCardNo  && !this.phoneNo) {
-                const rec = arr.find( item => item.firstName.toLowerCase() === this.firstNameVal.toLowerCase());
-                if(rec) record.push(rec);
+
+            if(this.admitCardNo) {
+                error = false;
+                const rec = arr.find(item => item.admitCardNumber.toString() === this.admitCardNo);
+                if(rec) {
+                    if(this.firstNameVal && !error){
+                        if(rec.firstName?.toLowerCase() != this.firstNameVal.toLowerCase()){
+                            error = true;
+                        }
+                    } 
+                    if(this.lastNameVal && !error){
+                        if(rec.lastName?.toLowerCase() != this.lastNameVal.toLowerCase()){
+                            error = true;
+                        }
+                    } 
+                    if(this.phoneNo && !error){
+                        if(rec.phone != this.phoneNo){
+                            error = true;
+                        }
+                    }
+                    if(!error){
+                        recordItem = rec;
+                        break;
+                    }
+                }
             }
-            else if(!this.firstNameVal && this.lastNameVal && !this.admitCardNo  && !this.phoneNo) {
-                const rec = arr.find( item => item.lastName?.toLowerCase() === this.lastNameVal.toLowerCase());
-                if(rec) record.push(rec);
-            }
-            else if(!this.firstNameVal && !this.lastNameVal && this.admitCardNo && !this.phoneNo) {
-                const rec = arr.find( item => item.admitCardNumber.toString() === this.admitCardNo);
-                if(rec) record.push(rec);
-            }
-            else if(!this.firstNameVal && !this.lastNameVal && !this.admitCardNo  && this.phoneNo) {
-                const rec = arr.find( item => item.phone === this.phoneNo);
-                if(rec) record.push(rec);
+            
+            if(this.phoneNo) {
+                const rec = arr.find(item => item.phone === this.phoneNo);
+                if(rec) {
+                    if(this.admitCardNo && !error){
+                        if(rec.admitCardNumber.toString() != this.admitCardNo){
+                            error = true;
+                        }
+                    } 
+                    if(this.firstNameVal && !error){
+                        if(rec.firstName?.toLowerCase() != this.firstNameVal.toLowerCase()){
+                            error = true;
+                        }
+                    }
+                    if(this.lastNameVal && !error){
+                        if(rec.lastName?.toLowerCase() != this.lastNameVal.toLowerCase()){
+                            error = true;
+                        }
+                    } 
+                    if(!error){
+                        recordItem = rec;
+                        break;
+                    }
+                }
             }
 
-            /** Two search fields  */
-            else if(this.firstNameVal  && this.lastNameVal && !this.admitCardNo  && !this.phoneNo) {
-                const rec = arr.find( item => item.firstName.toLowerCase() === this.firstNameVal.toLowerCase() && item.lastName?.toLowerCase() === this.lastNameVal.toLowerCase());
-                if(rec) record.push(rec);
+            if(this.firstNameVal) {
+                error = false;
+                const rec = arr.find(item => item.firstName.toLowerCase() === this.firstNameVal.toLowerCase());
+                if(rec) {
+                    if(this.admitCardNo && !error){
+                        if(rec.admitCardNumber.toString() != this.admitCardNo){
+                            error = true;
+                        }
+                    } 
+                    if(this.lastNameVal && !error){
+                        if(rec.lastName?.toLowerCase() != this.lastNameVal.toLowerCase()){
+                            error = true;
+                        }
+                    } 
+                    if(this.phoneNo && !error){
+                        if(rec.phone != this.phoneNo){
+                            error = true;
+                        }
+                    }
+                    if(!error){
+                        recordItem = rec;
+                        break;
+                    }
+                }
             }
-            else if(this.firstNameVal  && !this.lastNameVal && this.admitCardNo && !this.phoneNo) {
-                const rec = arr.find( item => item.firstName.toLowerCase() === this.firstNameVal.toLowerCase() && item.admitCardNumber.toString() == this.admitCardNo);
-                if(rec) record.push(rec);
-            }
-            else if(this.firstNameVal  && !this.lastNameVal && !this.admitCardNo  && this.phoneNo) {
-                const rec = arr.find( item => item.firstName.toLowerCase() === this.firstNameVal.toLowerCase() && item.phone === this.phoneNo);
-                if(rec) record.push(rec);
-            }
-            else if(!this.firstNameVal && this.lastNameVal && this.admitCardNo && !this.phoneNo) {
-                const rec = arr.find( item => item.lastName?.toLowerCase() === this.lastNameVal.toLowerCase() && item.admitCardNumber.toString() === this.admitCardNo);
-                if(rec) record.push(rec);
-            }
-            else if(!this.firstNameVal && this.lastNameVal && !this.admitCardNo  && this.phoneNo) {
-                const rec = arr.find( item => item.lastName?.toString() === this.lastNameVal && item.phone == this.phoneNo);
-                if(rec) record.push(rec);
-            }
-            else if(!this.firstNameVal && !this.lastNameVal && this.admitCardNo && this.phoneNo) {
-                const rec = arr.find( item => item.admitCardNumber.toString() === this.admitCardNo && item.phone === this.phoneNo);
-                if(rec) record.push(rec);
-            }
+
+            if(this.lastNameVal) {
+                error = false;
+                const rec = arr.find(item => item.lastName?.toLowerCase() === this.lastNameVal.toLowerCase());
+                if(rec) {
+                    if(this.admitCardNo && !error){
+                        if(rec.admitCardNumber.toString() != this.admitCardNo){
+                            error = true;
+                        }
+                    } 
+                    if(this.firstNameVal && !error){
+                        if(rec.firstName?.toLowerCase() != this.firstNameVal.toLowerCase()){
+                            error = true;
+                        }
+                    } 
+                    if(this.phoneNo && !error){
+                        if(rec.phone != this.phoneNo){
+                            error = true;
+                        }
+                    }
+                    if(!error){
+                        recordItem = rec;
+                        break;
+                    }
+                }
+            }            
+        }
+
+        if(recordItem) {
+            record.push(recordItem);
+        } else{
+            error = true;
         }
 
        if(record.length == 1) {
             this.router.navigate(['details-page'], {state:{record:record[0]}}).catch(()=>{})
         }
-        else  if(record.length == 0) {
+        else if(record.length == 0) {
             message = 'No record found!';
             this.openErrDialog(message);
         }
@@ -128,6 +191,7 @@ export  class HomeComponent implements AfterViewInit, OnInit{
             this.openErrDialog(message);
         }
     }
+
     openErrDialog(msg:string) {
         const dialogConfig = new MatDialogConfig();
         dialogConfig.width='400px';
