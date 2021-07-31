@@ -98,32 +98,37 @@
                 <table fxFlex mat-table [dataSource]="dataSource" class="scroll-container member-table">
             
                     <ng-container matColumnDef="admitNo">
-                        <th mat-header-cell *matHeaderCellDef> Admit card no </th>
+                        <th  style="width: 10%; text-align: center;" mat-header-cell *matHeaderCellDef> Admit card no </th>
                         <td mat-cell *matCellDef="let element">{{ element.admitCardNumber }}</td>
                     </ng-container>
             
                     <ng-container matColumnDef="fName">
-                        <th mat-header-cell *matHeaderCellDef> First name </th>
+                        <th  style="width: 15%; text-align: center;" mat-header-cell *matHeaderCellDef> First name </th>
                         <td mat-cell *matCellDef="let element"> {{ element.firstName}} </td>
                     </ng-container>
 
-                    <ng-container matColumnDef="lName">
-                        <th mat-header-cell *matHeaderCellDef> Last name </th>
-                        <td mat-cell *matCellDef="let element"> {{ element.lastName || '-' }} </td>
+                    <ng-container  matColumnDef="lName">
+                        <th style="width: 15%; text-align: center;" mat-header-cell *matHeaderCellDef> Last name </th>
+                        <td mat-cell *matCellDef="let element"> {{ element.lastName || '---' }} </td>
                     </ng-container>
             
-                    <ng-container matColumnDef="gender">
-                        <th mat-header-cell *matHeaderCellDef> Gender</th>
+                    <ng-container  matColumnDef="gender">
+                        <th style="width: 5%; text-align: center;" mat-header-cell *matHeaderCellDef> Gender</th>
                         <td mat-cell *matCellDef="let element"> {{ element.gender }} </td>
                     </ng-container>
+
+                    <ng-container  matColumnDef="altName">
+                        <th style="width: 15%; text-align: center;" mat-header-cell *matHeaderCellDef> Alternate name </th>
+                        <td mat-cell *matCellDef="let element"> {{ element.alternateName || '---' }} </td>
+                    </ng-container>
                     
-                    <ng-container matColumnDef="phone">
-                        <th mat-header-cell *matHeaderCellDef> Phone</th>
+                    <ng-container  matColumnDef="phone">
+                        <th style="width: 20%; text-align: center;" mat-header-cell *matHeaderCellDef> Phone</th>
                         <td mat-cell *matCellDef="let element"> {{ element.phone }} </td>
                     </ng-container>
             
-                    <ng-container matColumnDef="address">
-                        <th mat-header-cell *matHeaderCellDef> Address </th>
+                    <ng-container  matColumnDef="address">
+                        <th style="width: 20%; text-align: center;" mat-header-cell *matHeaderCellDef> Address </th>
                         <td mat-cell *matCellDef="let element"> {{ element.address }} </td>
                     </ng-container>
             
