@@ -17,7 +17,7 @@ import { SearchInfoDialogComponent } from "./search-info-dialog/search-info-dial
 export  class HomeComponent implements AfterViewInit, OnInit{
     currentTime = moment().format("MM/DD/YYYY hh:mm A");
     dataSource!: MemberListModel[];
-    displayedColumns = ['admitNo', 'fName', 'lName', 'gender', 'phone', 'address'];
+    displayedColumns = ['admitNo', 'fName', 'lName', 'gender', 'altName', 'phone', 'address'];
     memberSearchForm !: FormGroup;
     admitCardNo!: string;
     firstNameVal!: string;
