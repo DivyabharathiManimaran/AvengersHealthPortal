@@ -34,6 +34,10 @@ export  class MemberDetailComponent implements OnInit{
         else this.picture = "assets/images/male-profile.jpg";
     }
 
+    ageFromDob(dob: any): number {
+        return moment().diff(dob, 'years');
+    }
+
     
 
 }
