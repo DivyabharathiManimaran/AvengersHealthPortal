@@ -20,8 +20,8 @@ export interface MemberListModel {
     "maritalStatus"?: string,
     "spouseName"?:string,
     "spouseOccupation"?: string,
-    "children"?: string
-
+    "children"?: string,
+    "race"?:string
 }
 
 export interface MemberListArray {

@@ -1,7 +1,8 @@
 <div fxFlexFill fxLayout="column" class="scroll-container">
     <div fxLayoutAlign ="start center" class="header primary-color-theme">
         <img alt="Avengers pportal logo" src="../../assets/images/logo.jpg" (click) = homeComponentService.goToHome()/>
-        <div> Avengers Health Portal </div>
+        <div fxHide.lt-sm> Avengers Health Portal </div>
+        <div fxHide.gt-xs> Health Portal </div>
     </div>   
     <div fxFlex fxLayout="column" class="body-bg scroll-container">
         <form [formGroup]="memberSearchForm">
@@ -91,11 +92,11 @@
             </div>
         </mat-card>
         </form>
-        <mat-card fxFlex fxLayout="column" class="card-padding scroll-container">
+        <mat-card fxFlex fxLayout="column" style="padding: 16px 0;" class="card-padding scroll-container">
             <div fxLayout="row" fxLayoutAlign ="center" class="sub-heading"> List of Members available</div>
             <hr/>
             <div fxLayout="column" fxFlex class="scroll-container">
-                <table fxFlex mat-table [dataSource]="dataSource" class="scroll-container member-table">
+                <table mat-table [dataSource]="dataSource" class="scroll-container member-table">
             
                     <ng-container matColumnDef="admitNo">
                         <th  style="width: 10%; text-align: center;" mat-header-cell *matHeaderCellDef> Admit card no </th>
