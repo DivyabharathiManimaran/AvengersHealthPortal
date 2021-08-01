@@ -22,8 +22,50 @@
             "children":"Morgan Stark",
             "admitCardNumber": 432,
             "picture":"https://th.bing.com/th/id/R.a9302147e7b6b1bb716894913fe28eb8?rik=gDdKQ1DCPeYQ6g&riu=http%3a%2f%2f173.203.60.6%2f%7enewbeardclinic%2fwp-content%2fuploads%2f2015%2f04%2ftony-stark-beard.jpg&ehk=LDqAC8UWb2y1VxKwCkV9NBlPruBf8TQaPUpYkRjIJuE%3d&risl=&pid=ImgRaw",
-            "abilities":[],
-            "race":"Caucasian"
+            "abilities":["Industrial Genius","Expert Businessman","Expert Tactician","Skilled Combatant","Indomitable Will"],
+            "powers":[
+                {
+                    "power":"Direct Cybernetic Interface",
+                    "detail":"Ability to manifest and control the armor through direct brain impulses and even utilize some of its powers when unsurfaced. He has direct, cyberpathic control over the communication devices, scanning equipment, and recording devices located in his helmet."
+                },
+                {
+                    "power":"Wireless Communication",
+                    "detail":"Ability to remotely connect to external communications systems such as satellites, cellular phones, and computers throughout the world. Stark is also capable of projecting his voice through transmitting sound systems such as cellular phones via electric transmissions from his central nervous system."
+                },
+                {
+                    "power":"Superhuman Reflexes",
+                    "detail":"The Extremis virus grants him enhanced speed reactions and movements."
+                },
+                {
+                    "power":"Regenerative Systems",
+                    "detail":"Stark is capable has the ability to biologically heal himself and repair the armor."
+                },
+                {
+                    "power":"Minor Shapeshifting",
+                    "detail":"His armor is made up of Nano-Machines that can be commanded to turn into any type of structure upon Stark's skin."
+                }
+            ],
+            "race":"Caucasian",
+            "healthCondition": [
+                {
+                    "title": "PTSD",
+                    "description": "Post-Traumatic Stress Disorder",
+                    "cause": "Tony did not have any apparent signs of serious mental illness until he fought in an all-out war in New York against the Chitauri to protect Earth. During the course of the battle Tony took a nuclear warhead through a wormhole in order to protect the civilians in New York, believing he would not survive. Tony survived the experience, but he began to experience symptoms of Post-Traumatic Stress Disorder (PTSD)",
+                    "symptoms":["Insomnia", "Nightmares", "Anxiety attack"]
+                },
+                {
+                    "title": "PTSD",
+                    "description": "Post-Traumatic Stress Disorder",
+                    "cause": "Tony did not have any apparent signs of serious mental illness until he fought in an all-out war in New York against the Chitauri to protect Earth. During the course of the battle Tony took a nuclear warhead through a wormhole in order to protect the civilians in New York, believing he would not survive. Tony survived the experience, but he began to experience symptoms of Post-Traumatic Stress Disorder (PTSD)",
+                    "symptoms":["Insomnia", "Nightmares", "Anxiety attack"]
+                },
+                {
+                    "title": "PTSD",
+                    "description": "Post-Traumatic Stress Disorder",
+                    "cause": "Tony did not have any apparent signs of serious mental illness until he fought in an all-out war in New York against the Chitauri to protect Earth. During the course of the battle Tony took a nuclear warhead through a wormhole in order to protect the civilians in New York, believing he would not survive. Tony survived the experience, but he began to experience symptoms of Post-Traumatic Stress Disorder (PTSD)",
+                    "symptoms":["Insomnia", "Nightmares", "Anxiety attack"]
+                }
+            ]
         },
         {
             "lastName": "",

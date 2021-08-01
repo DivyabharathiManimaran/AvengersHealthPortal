@@ -16,3 +16,7 @@ $custom-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent, $cus
     border: 3px solid mat-color($custom-theme-warn);
     border-radius: 10px;
 }
+
+.error {
+    color: mat-color($custom-theme-warn);
+}

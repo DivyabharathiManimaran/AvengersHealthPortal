@@ -10,6 +10,10 @@ import { MatCheckboxModule } from '@angular/material/checkbox'
 import { MatTableModule } from '@angular/material/table';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatListModule} from '@angular/material/list';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatIconModule} from '@angular/material/icon'
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,7 +23,6 @@ import { HomeComponentService } from './home-component/service/home-component.se
 import { MemberDetailComponent } from './home-component/member-detail/member-detail.component';
 import { OnlynumberDirective } from './home-component/directives/numberOnly.directive';
 import { SearchInfoDialogComponent } from './home-component/search-info-dialog/search-info-dialog.component';
-import { MatTooltipModule } from '@angular/material/tooltip';
 import { PhoneNumberDirective } from './home-component/directives/phoneNumber.directive';
 
 
@@ -35,6 +38,9 @@ import { PhoneNumberDirective } from './home-component/directives/phoneNumber.di
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatExpansionModule,
+    MatListModule,
+    MatIconModule,
     BrowserAnimationsModule,
     MatButtonModule, 
     MatCheckboxModule,
