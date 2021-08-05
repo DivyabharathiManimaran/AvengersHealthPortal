@@ -25,11 +25,12 @@
                                     <div><label>Age: </label><b> {{ ageFromDob(item.dob) > 0 ? (ageFromDob(item.dob) + ' Year(s)') : 'Unknown'  }} </b></div>
                                     <div><label>DOB: </label> <b> {{ item.dob || 'Unknown'  }} </b></div>
                                     <div><label>Gender: </label><b> {{ item.gender || 'Unknown'  }}</b></div>
+                                    <div *ngIf="item.status"><label>Status: </label><b> {{ item.status || 'Unknown'  }}</b></div>
                                 </div>
                                 <div>
                                     <div><label>Height: </label> <b> {{ item.height || 'Unknown'  }} </b></div>
                                     <div><label>Weight: </label><b> {{ item.weight || 'Unknown'  }}</b></div>
-                                    <div><label>Race: </label><b> {{ item.race || 'Unknown'  }}</b></div>
+                                    <div><label>Race/Ethnicity: </label><b> {{ item.race || 'Unknown'  }}</b></div>
                                 </div>
                                 <div>
                                     <div><label>Address: </label> <b> {{ item.address }} </b></div>
@@ -57,32 +58,43 @@
                             </div>
                         </ng-template>
                     </mat-tab>
-                    <mat-tab label="Allergies/Syndromes">
-                        <ng-template  matTabContent>
-                            <div fxLayout="row" fxFlex fxLayoutAlign="start start" *ngIf="item.healthCondition && item.healthCondition.length > 0; else unKnown" class="inner-padding">
-                                <mat-accordion>
-                                    <mat-expansion-panel style="margin-bottom: 10px;" *ngFor="let hc of item.healthCondition">
-                                        <mat-expansion-panel-header>
-                                            <mat-panel-title>
-                                                {{hc.title}}
-                                            </mat-panel-title>
-                                            <mat-panel-description *ngIf="hc.description">
-                                                {{ hc.description }}
-                                            </mat-panel-description>
-                                        </mat-expansion-panel-header>
-                                        <div fxLayout="column">
-                                            <div>{{ hc.cause }}</div>
-                                            <em>Symptoms of {{hc.title}}:</em>
-                                            <ul style="margin-left: 30px;">
-                                                <li *ngFor="let list of hc.symptoms">{{ list }}</li>
-                                            </ul>
-                                        </div>                                    
-                                    </mat-expansion-panel>                                
-                                </mat-accordion>
+                    <mat-tab class="scroll-container" label="Syndromes/Disabilities">
+                        <ng-template class="scroll-container" matTabContent>
+                            <div fxLayout="column" fxFlex  class="inner-padding scroll-container">
+                                <div fxFlex fxLayoutAlign="start stretch">
+                                    <mat-accordion fxFlex>
+                                        <mat-expansion-panel style="margin-bottom: 10px;" *ngFor="let hc of item.healthCondition; let i = index">
+                                            <mat-expansion-panel-header>
+                                                <mat-panel-title>
+                                                    Allergies or Syndromes <span *ngIf="hc.title"> ({{i+1}})</span>
+                                                </mat-panel-title>
+                                            </mat-expansion-panel-header>
+                                            <div *ngIf="hc.title; else unKnown" fxLayout="column">
+                                                <span><b>{{hc.title}}: </b> {{ hc.description }}</span>
+                                                <div>{{ hc.cause }}</div>
+                                                <em *ngIf="hc.symptoms && hc.symptoms.length > 0">Symptoms of {{hc.title}}:</em>
+                                                <ul style="margin-left: 30px;">
+                                                    <li *ngFor="let list of hc.symptoms">{{ list }}</li>
+                                                </ul>
+                                            </div> 
+                                            <ng-template #unKnown><b>No known Allergies or Syndromes</b></ng-template>                                   
+                                        </mat-expansion-panel>
+                                        <mat-expansion-panel style="margin-bottom: 10px;" *ngFor="let disability of item.disabilities; let i = index">
+                                            <mat-expansion-panel-header>
+                                                <mat-panel-title>
+                                                    Disabilities <span *ngIf="disability.title">({{i+1}})</span>
+                                                </mat-panel-title>
+                                            </mat-expansion-panel-header>
+
+                                            <div *ngIf="disability.title; else unKnown" fxLayout="column">
+                                                <b>{{disability.title}}: </b>
+                                                <div>{{ disability.cause }}</div>
+                                            </div>
+                                            <ng-template #unKnown><b>No known disabilities</b></ng-template>                                     
+                                        </mat-expansion-panel>                               
+                                    </mat-accordion>
+                                </div>
                             </div>
-                            <ng-template #unKnown>
-                                <div fxLayoutAlign="center" class="inner-padding">No known Allergies or Syndromes</div>
-                            </ng-template>
                         </ng-template>
                     </mat-tab>
                     <mat-tab label="Special powers/abilities">
@@ -108,13 +120,6 @@
                                         </mat-list-item>
                                     </mat-list>
                                 </div>
-                            </div>
-                        </ng-template>
-                    </mat-tab>
-                    <mat-tab label="Wars/Battles">
-                        <ng-template  matTabContent>
-                            <div  class="inner-padding">
-                            <h1>Some more tab content</h1>
                             </div>
                         </ng-template>
                     </mat-tab>
