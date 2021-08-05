@@ -22,7 +22,7 @@
                         <ng-template matTabContent>
                             <div fxLayout="row" fxLayoutAlign="space-between start" class="inner-padding">
                                 <div>
-                                    <div><label>Age: </label><b> {{ ageFromDob(item.dob) > 0 ? (ageFromDob(item.dob) + ' Year(s)') : 'Unknown'  }} </b></div>
+                                    <div><label>Age: </label><b> {{ ageFromDob(item.dob) > 0 ? (ageFromDob(item.dob) + ' Year(s)') : item.age  }} </b></div>
                                     <div><label>DOB: </label> <b> {{ item.dob || 'Unknown'  }} </b></div>
                                     <div><label>Gender: </label><b> {{ item.gender || 'Unknown'  }}</b></div>
                                     <div *ngIf="item.status"><label>Status: </label><b> {{ item.status || 'Unknown'  }}</b></div>
@@ -45,9 +45,9 @@
                                 <div>
                                     <div><label>Occupation: </label><b> {{ item.selfOccupation || 'Unknown' }}</b></div>
                                     <div><label>Marital status: </label> <b> {{ item.maritalStatus || 'Unknown' }} </b></div>
-                                    <div><label>Spouse/GF/BF name: </label><b> {{ item.spouseName  ? 'Ms. '+ item.spouseName : 'Unknown' }}</b></div>
-                                    <div><label>Occupation: </label><b> {{ item.spouseOccupation || 'Unknown' }}</b></div>
-                                    <div><label>Children: </label><b> {{ item.children || 'Unknown' }}</b></div>
+                                    <div><label>Spouse/GF/BF name: </label><b> {{ item.spouseName  ? 'Ms. '+ item.spouseName : 'N/A' }}</b></div>
+                                    <div><label>Occupation: </label><b> {{ item.spouseOccupation || 'N/A' }}</b></div>
+                                    <div><label>Children: </label><b> {{ item.children || 'N/A' }}</b></div>
                                 </div>
                                 <div>
                                     <div><label>Father's name: </label><b> {{ item.fatherName ? 'Mr. '+ item.fatherName : 'Unknown' }}</b></div>

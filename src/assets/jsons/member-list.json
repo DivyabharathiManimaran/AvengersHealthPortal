@@ -1,6 +1,7 @@
 {
     "memberList": [
         {
+            "admitCardNumber": 100,
             "lastName": "Stark",
             "firstName": "Tony",
             "alternateName":"Iron man",
@@ -21,7 +22,6 @@
             "spouseName":"Virginia Potts",
             "spouseOccupation":"Personal assistant at Stark Industries",
             "children":"Morgan Stark",
-            "admitCardNumber": 432,
             "picture":"https://th.bing.com/th/id/R.a9302147e7b6b1bb716894913fe28eb8?rik=gDdKQ1DCPeYQ6g&riu=http%3a%2f%2f173.203.60.6%2f%7enewbeardclinic%2fwp-content%2fuploads%2f2015%2f04%2ftony-stark-beard.jpg&ehk=LDqAC8UWb2y1VxKwCkV9NBlPruBf8TQaPUpYkRjIJuE%3d&risl=&pid=ImgRaw",
             "abilities":["Industrial Genius","Expert Businessman","Expert Tactician","Skilled Combatant","Indomitable Will"],
             "disabilities":[{}],
@@ -62,14 +62,14 @@
             ]
         },
         {
+            "admitCardNumber": 200,
             "lastName": "Odinson",
             "firstName": "Thor",
             "alternateName":"Donar",
             "gender":"Male",
             "phone": "422-123-4400",
             "address":"Asgard",
-            "admitCardNumber": 320,
-            "age":"1500",
+            "age":"1500 Year(s)",
             "dob":"964 A.D.-965 A.D.",
             "height":"6 ft, 6 in",
             "weight":"290.3 kg",
@@ -79,11 +79,11 @@
             "fatherOccupation":"King of Asgard",
             "motherName":"Frigga",
             "motherOccupation":"Witch",
-            "maritalStatus":"divorced",
+            "maritalStatus":"Divorced",
             "spouseName":"Jane Foster",
             "spouseOccupation":"Doctor",
             "children":"Magni",
-            "picture":"https://wallsdesk.com/wp-content/uploads/2016/12/Thor-Images.jpg",
+            "picture":"https://i.redd.it/q4ggbyzxfvv21.jpg",
             "abilities":["Honed Agility", "Master Hand-To-Hand Combatant","Master Hammer Fighter", "High-level intellect/Master Tactician/Leader"],
             "disabilities":[{
                 "title": "Lost right eye",
@@ -96,16 +96,16 @@
                     "detail":"Has extraordinary strength, easily surpassing most other Asgardians. Typically in battle he will send opponents flying with a single blow."
                 },
                 {
+                    "power":"Owner of Mjölnir",
+                    "detail":"Thor’s hammer had special powers, including returning to its master like a boomerang"
+                },
+                {
                     "power":"Electrokinesis",
                     "detail":"Ability to generate electricity from his body without relying on Mjölnir."
                 },
                 {
                     "power":"Superhuman Longevity",
                     "detail":"Has a lifespan far longer than that of a human being. While not truly immortal, he is known to be over one-thousand years of age."
-                },
-                {
-                    "power":"Owner of Mjölnir",
-                    "detail":"Thor’s hammer had special powers, including returning to its master like a boomerang"
                 },
                 {
                     "power":"Atmokinesis",
@@ -120,13 +120,13 @@
             "healthCondition": [{}]
         },
         {
+            "admitCardNumber": 300,
             "lastName": "Romanoff",
             "firstName": "Natasha",
             "alternateName":"Black widow",
             "gender":"Female",
             "phone": "200-620-0011",
             "address":"12, 230rd St, LA",
-            "admitCardNumber": 200,
             "age":"32",
             "dob":"December 3,1984",
             "height":"5 ft, 7 in",
@@ -138,9 +138,9 @@
             "motherName":"Melina Vostokova",
             "motherOccupation":"",
             "maritalStatus":"Single",
-            "spouseName":"-",
-            "spouseOccupation":"-",
-            "children":"-",
+            "spouseName":"",
+            "spouseOccupation":"",
+            "children":"",
             "race":"Kazakh, Russian",
             "disabilities": [{}],
             "picture":"https://i.pinimg.com/originals/82/02/06/820206e586ae27f0767c87bcec718f06.jpg",
@@ -178,54 +178,6 @@
                 }
             ],
             "healthCondition": [{}]
-        },
-        {
-            "lastName": "Romanoff",
-            "firstName": "Natasha",
-            "alternateName":"Black Widow",
-            "gender":"Female",
-            "phone": "",
-            "address":"",
-            "admitCardNumber": "",
-            
-            
-            "age":" 32 or 33 years old",
-            "dob":"December 3,1984",
-            "height":"5 feet, 7 inches",
-            "weight":"131 pounds",
-            "selfOccupation":"",
-            "fatherName":"Ivan Romanoff",
-            "fatherOccupation":"",
-            "motherName":"Melina Vostokova",
-            "motherOccupation":"",
-            "maritalStatus":"",
-            "spouseName":"",
-            "spouseOccupation":"",
-            "children":"",
-            "picture":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fin.news.yahoo.com%2Fblack-widow-will-shed-light-on-natashas-exploits-between-marvel-movies-104210389.html&psig=AOvVaw0mZ9M3i6TMHa92nQFu4BIJ&ust=1628004270796000&source=images&cd=vfe&ved=2ahUKEwiFnKbT0pLyAhV73XMBHWA3ASEQr4kDegUIARDiAQ",
-            "abilities": [
-                "skilled in many forms of martial arts including aikido, judo, karate, savate, and boxing"
-            ],
-            "powers":[
-                {
-                    "power":"Expert spy, tactician",
-                    "detail":"An expert in tactics"
-                },
-                {
-                    "power":"Skilled hypnotist.",
-                    "detail":"a person skilled in the theory and practice of hypnosis."
-                }
-            ],
-            "race":"",
-            "healthCondition": [
-                {
-                    "title": "",
-                    "description": "",
-                    "cause": "",
-                    "symptoms":[""]
-                }
-            ]
-            
         }
     ]
 }

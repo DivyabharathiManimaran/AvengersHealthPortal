@@ -35,7 +35,8 @@ export  class MemberDetailComponent implements OnInit{
     }
 
     ageFromDob(dob: any): number {
-        return moment().diff(dob, 'years');
+        if(dob.includes('A.D.') || dob.includes('B.C.')) return 0;
+        else return moment().diff(dob, 'years');
     }
 
     
