@@ -24,7 +24,7 @@
             "admitCardNumber": 432,
             "picture":"https://th.bing.com/th/id/R.a9302147e7b6b1bb716894913fe28eb8?rik=gDdKQ1DCPeYQ6g&riu=http%3a%2f%2f173.203.60.6%2f%7enewbeardclinic%2fwp-content%2fuploads%2f2015%2f04%2ftony-stark-beard.jpg&ehk=LDqAC8UWb2y1VxKwCkV9NBlPruBf8TQaPUpYkRjIJuE%3d&risl=&pid=ImgRaw",
             "abilities":["Industrial Genius","Expert Businessman","Expert Tactician","Skilled Combatant","Indomitable Will"],
-            "disabilities":[""],
+            "disabilities":[{}],
             "powers":[
                 {
                     "power":"Direct Cybernetic Interface",
@@ -85,7 +85,11 @@
             "children":"Magni",
             "picture":"https://wallsdesk.com/wp-content/uploads/2016/12/Thor-Images.jpg",
             "abilities":["Honed Agility", "Master Hand-To-Hand Combatant","Master Hammer Fighter", "High-level intellect/Master Tactician/Leader"],
-            "disabilities":["Lost right eye"],
+            "disabilities":[{
+                "title": "Lost right eye",
+                "description": "",
+                "cause": "Thor faces off against his sister, Hela and during that fight, he ends up losing his right eye, after which he was wearing a patch similar to his father. Later on Rocket gives him an eye socket."
+            }],
             "powers":[
                 {
                     "power":"Superhuman strength",
@@ -138,7 +142,7 @@
             "spouseOccupation":"-",
             "children":"-",
             "race":"Kazakh, Russian",
-            "disabilities": ["Autistic"],
+            "disabilities": [{}],
             "picture":"https://i.pinimg.com/originals/82/02/06/820206e586ae27f0767c87bcec718f06.jpg",
             "abilities": [
                 "Master martial arts", "Expert marksman", "Multilingual", "Graceful dancer", "Talented Hacker"

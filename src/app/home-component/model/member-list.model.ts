@@ -8,7 +8,7 @@ export interface MemberListModel {
     "address"?:string,
     "admitCardNumber": number,
     "abilities"?: Array<string>,
-    "disabilities": Array<string>,
+    "disabilities": Array<hc>,
     "powers"?: Array<{power:string, detail: string}>,
     "age": string,
     "dob": string,

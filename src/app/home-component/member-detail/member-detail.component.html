@@ -62,8 +62,8 @@
                         <ng-template class="scroll-container" matTabContent>
                             <div fxLayout="column" fxFlex  class="inner-padding scroll-container">
                                 <div fxFlex fxLayoutAlign="start stretch">
-                                    <mat-accordion>
-                                        <mat-expansion-panel style="margin-bottom: 10px;" *ngFor="let hc of item.healthCondition">
+                                    <mat-accordion fxFlex>
+                                        <mat-expansion-panel style="margin-bottom: 10px;" *ngFor="let hc of item.healthCondition; let i = index">
                                             <mat-expansion-panel-header>
                                                 <mat-panel-title>
                                                     Allergies or Syndromes <span *ngIf="hc.title"> ({{i+1}})</span>
@@ -78,21 +78,20 @@
                                                 </ul>
                                             </div> 
                                             <ng-template #unKnown><b>No known Allergies or Syndromes</b></ng-template>                                   
-                                        </mat-expansion-panel>                                
-                                    </mat-accordion>
-                                </div>
-                                <div fxFlex fxLayoutAlign="start start">
-                                    <mat-accordion fxFlex>
-                                        <mat-expansion-panel style="margin-bottom: 10px;" *ngFor="let disability of item.disabilities">
+                                        </mat-expansion-panel>
+                                        <mat-expansion-panel style="margin-bottom: 10px;" *ngFor="let disability of item.disabilities; let i = index">
                                             <mat-expansion-panel-header>
                                                 <mat-panel-title>
-                                                    Disabilities <span *ngIf="disability">({{i+1}})</span>
+                                                    Disabilities <span *ngIf="disability.title">({{i+1}})</span>
                                                 </mat-panel-title>
                                             </mat-expansion-panel-header>
-                                            <div fxLayout="column">
-                                                <b>{{disability || 'No known disabilities'}}</b>
-                                            </div>                                    
-                                        </mat-expansion-panel>                                
+
+                                            <div *ngIf="disability.title; else unKnown" fxLayout="column">
+                                                <b>{{disability.title}}: </b>
+                                                <div>{{ disability.cause }}</div>
+                                            </div>
+                                            <ng-template #unKnown><b>No known disabilities</b></ng-template>                                     
+                                        </mat-expansion-panel>                               
                                     </mat-accordion>
                                 </div>
                             </div>
