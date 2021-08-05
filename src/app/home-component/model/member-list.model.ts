@@ -8,11 +8,13 @@ export interface MemberListModel {
     "address"?:string,
     "admitCardNumber": number,
     "abilities"?: Array<string>,
+    "disabilities": Array<string>,
     "powers"?: Array<{power:string, detail: string}>,
     "age": string,
     "dob": string,
     "height"?: string,
     "weight"?: string,
+    "status"?: string,
     "selfOccupation"?:string,
     "fatherName"?: string,
     "fatherOccupation"?: string,
@@ -23,13 +25,13 @@ export interface MemberListModel {
     "spouseOccupation"?: string,
     "children"?: string,
     "race"?:string
-    "healthCondition"?: Array<hc>;
+    "healthCondition": Array<hc>;
 }
  export interface hc {
-     "title": string,
+     "title"?: string,
      "description"?: string,
-     "cause": string,
-     "symptoms": Array<string>
+     "cause"?: string,
+     "symptoms"?: Array<string>
  }
 export interface MemberListArray {
     "memberList"?: Array<MemberListModel>

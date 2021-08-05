@@ -11,6 +11,7 @@
             "weight":"70 Kgs",
             "phone": "245-732-4455",
             "address":"Stark industries, LA",
+            "status":"Deceased",
             "selfOccupation":"CEO of Stark Industries,industrialist, inventor",
             "fatherName":"Howard Stark",
             "fatherOccupation":"Inventor/businessman",
@@ -23,6 +24,7 @@
             "admitCardNumber": 432,
             "picture":"https://th.bing.com/th/id/R.a9302147e7b6b1bb716894913fe28eb8?rik=gDdKQ1DCPeYQ6g&riu=http%3a%2f%2f173.203.60.6%2f%7enewbeardclinic%2fwp-content%2fuploads%2f2015%2f04%2ftony-stark-beard.jpg&ehk=LDqAC8UWb2y1VxKwCkV9NBlPruBf8TQaPUpYkRjIJuE%3d&risl=&pid=ImgRaw",
             "abilities":["Industrial Genius","Expert Businessman","Expert Tactician","Skilled Combatant","Indomitable Will"],
+            "disabilities":[""],
             "powers":[
                 {
                     "power":"Direct Cybernetic Interface",
@@ -51,31 +53,67 @@
                     "title": "PTSD",
                     "description": "Post-Traumatic Stress Disorder",
                     "cause": "Tony did not have any apparent signs of serious mental illness until he fought in an all-out war in New York against the Chitauri to protect Earth. During the course of the battle Tony took a nuclear warhead through a wormhole in order to protect the civilians in New York, believing he would not survive. Tony survived the experience, but he began to experience symptoms of Post-Traumatic Stress Disorder (PTSD)",
-                    "symptoms":["Insomnia", "Nightmares", "Anxiety attack"]
+                    "symptoms":["Insomnia", "Nightmares"]
                 },
                 {
-                    "title": "PTSD",
-                    "description": "Post-Traumatic Stress Disorder",
-                    "cause": "Tony did not have any apparent signs of serious mental illness until he fought in an all-out war in New York against the Chitauri to protect Earth. During the course of the battle Tony took a nuclear warhead through a wormhole in order to protect the civilians in New York, believing he would not survive. Tony survived the experience, but he began to experience symptoms of Post-Traumatic Stress Disorder (PTSD)",
-                    "symptoms":["Insomnia", "Nightmares", "Anxiety attack"]
-                },
-                {
-                    "title": "PTSD",
-                    "description": "Post-Traumatic Stress Disorder",
-                    "cause": "Tony did not have any apparent signs of serious mental illness until he fought in an all-out war in New York against the Chitauri to protect Earth. During the course of the battle Tony took a nuclear warhead through a wormhole in order to protect the civilians in New York, believing he would not survive. Tony survived the experience, but he began to experience symptoms of Post-Traumatic Stress Disorder (PTSD)",
-                    "symptoms":["Insomnia", "Nightmares", "Anxiety attack"]
+                    "title": "Anxiety attack",
+                    "cause": "When the degree of PTSD goes high, Tony suffers panic attack / anxiety attack."
                 }
             ]
         },
         {
-            "lastName": "",
+            "lastName": "Odinson",
             "firstName": "Thor",
-            "alternateName":"",
+            "alternateName":"Donar",
             "gender":"Male",
             "phone": "422-123-4400",
             "address":"Asgard",
             "admitCardNumber": 320,
-            "abilities":[]
+            "age":"1500",
+            "dob":"964 A.D.-965 A.D.",
+            "height":"6 ft, 6 in",
+            "weight":"290.3 kg",
+            "race":"Asgardian ",
+            "selfOccupation":"God of thunder",
+            "fatherName":"Odin",
+            "fatherOccupation":"King of Asgard",
+            "motherName":"Frigga",
+            "motherOccupation":"Witch",
+            "maritalStatus":"divorced",
+            "spouseName":"Jane Foster",
+            "spouseOccupation":"Doctor",
+            "children":"Magni",
+            "picture":"https://wallsdesk.com/wp-content/uploads/2016/12/Thor-Images.jpg",
+            "abilities":["Honed Agility", "Master Hand-To-Hand Combatant","Master Hammer Fighter", "High-level intellect/Master Tactician/Leader"],
+            "disabilities":["Lost right eye"],
+            "powers":[
+                {
+                    "power":"Superhuman strength",
+                    "detail":"Has extraordinary strength, easily surpassing most other Asgardians. Typically in battle he will send opponents flying with a single blow."
+                },
+                {
+                    "power":"Electrokinesis",
+                    "detail":"Ability to generate electricity from his body without relying on Mjölnir."
+                },
+                {
+                    "power":"Superhuman Longevity",
+                    "detail":"Has a lifespan far longer than that of a human being. While not truly immortal, he is known to be over one-thousand years of age."
+                },
+                {
+                    "power":"Owner of Mjölnir",
+                    "detail":"Thor’s hammer had special powers, including returning to its master like a boomerang"
+                },
+                {
+                    "power":"Atmokinesis",
+                    "detail":"Ability to control weather without relying on Mjölnir. "
+                },
+                {
+                    "power":"Superhuman Longevity",
+                    "detail":"Has a lifespan far longer than that of a human being. While not truly immortal, he is known to be over one-thousand years of age."
+                }
+                
+            ],
+            "healthCondition": [{}]
         },
         {
             "lastName": "Romanoff",
@@ -85,28 +123,105 @@
             "phone": "200-620-0011",
             "address":"12, 230rd St, LA",
             "admitCardNumber": 200,
+            "age":"32",
+            "dob":"December 3,1984",
+            "height":"5 ft, 7 in",
+            "weight":"59 Kgs",
+            "status":"Deceased",
+            "selfOccupation":"Spy/ assassin",
+            "fatherName":"Ivan Romanoff",
+            "fatherOccupation":"",
+            "motherName":"Melina Vostokova",
+            "motherOccupation":"",
+            "maritalStatus":"Single",
+            "spouseName":"-",
+            "spouseOccupation":"-",
+            "children":"-",
+            "race":"Kazakh, Russian",
+            "disabilities": ["Autistic"],
+            "picture":"https://i.pinimg.com/originals/82/02/06/820206e586ae27f0767c87bcec718f06.jpg",
             "abilities": [
-                "Military Tactics",
-                "Expert spy",
-                "hand-to-hand combatant",
-                "Grappling hook",
-                "Radio transmitter",
-                "Expert marksman",
-                "Explosives",
-                "Taser", "Knock out gas"
-            ]
+                "Master martial arts", "Expert marksman", "Multilingual", "Graceful dancer", "Talented Hacker"
+            ],
+            "powers":[
+                {
+                    "power":"Expert Tactician",
+                    "detail":"She is a very effective strategist, tactician, and field commander. She has lead the Avengers and even SHIELD on one occasion."
+                },
+                {
+                    "power":"Expert Spy",
+                    "detail":"Natasha is a dangerous secret agent trained in espionage, stealth, disguise, infiltration, and demolitions. Her talents and years of experience have enabled her to reach a high ranking as an agent of SHIELD."
+                },
+                {
+                    "power":"Artificially Enhanced Physiology",
+                    "detail":"Natasha has received the Red Room's variant of the Super-Soldier Serum. As a result, many of her body's physical capabilities have been heightened to the peak of human ability."
+                },
+                {
+                    "power":"Extended Longevity",
+                    "detail":"The serum variant has also extended her lifespan by dramatically slowing her natural aging process. Although she is almost 70 years old, she has the youthful appearance and vitality of a woman in the physical prime of her life."
+                },
+                {
+                    "power":"Peak Human Immune System",
+                    "detail":"While she is susceptible to disease like all other ordinary humans, her ability to resist and recover from them is heightened to the peak of human capability."
+                },
+                {
+                    "power":"Peak Human Strength, Speed, Agility, Durability",
+                    "detail":"Her speed, strength, agility is enhanced to the peak of human capability. Natasha is as fast , agile , durable as a human can be without being classified as superhuman."
+                },
+                {
+                    "power":"Peak Human Senses",
+                    "detail":"Her five senses are enhanced and function at peak of human perfection."
+                }
+            ],
+            "healthCondition": [{}]
         },
         {
-            "lastName": "Banner",
-            "firstName": "Bruce",
-            "alternateName":"Hulk",
-            "gender":"Male",
-            "phone": "245-732-4455",
-            "address":"1040 Eldorado Ave.,Clearwater, Florida",
-            "admitCardNumber": 204,
-            "abilities":[],
-            "height":"5 ft 9 in",
-            "weight": "128 lbs"
+            "lastName": "Romanoff",
+            "firstName": "Natasha",
+            "alternateName":"Black Widow",
+            "gender":"Female",
+            "phone": "",
+            "address":"",
+            "admitCardNumber": "",
+            
+            
+            "age":" 32 or 33 years old",
+            "dob":"December 3,1984",
+            "height":"5 feet, 7 inches",
+            "weight":"131 pounds",
+            "selfOccupation":"",
+            "fatherName":"Ivan Romanoff",
+            "fatherOccupation":"",
+            "motherName":"Melina Vostokova",
+            "motherOccupation":"",
+            "maritalStatus":"",
+            "spouseName":"",
+            "spouseOccupation":"",
+            "children":"",
+            "picture":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fin.news.yahoo.com%2Fblack-widow-will-shed-light-on-natashas-exploits-between-marvel-movies-104210389.html&psig=AOvVaw0mZ9M3i6TMHa92nQFu4BIJ&ust=1628004270796000&source=images&cd=vfe&ved=2ahUKEwiFnKbT0pLyAhV73XMBHWA3ASEQr4kDegUIARDiAQ",
+            "abilities": [
+                "skilled in many forms of martial arts including aikido, judo, karate, savate, and boxing"
+            ],
+            "powers":[
+                {
+                    "power":"Expert spy, tactician",
+                    "detail":"An expert in tactics"
+                },
+                {
+                    "power":"Skilled hypnotist.",
+                    "detail":"a person skilled in the theory and practice of hypnosis."
+                }
+            ],
+            "race":"",
+            "healthCondition": [
+                {
+                    "title": "",
+                    "description": "",
+                    "cause": "",
+                    "symptoms":[""]
+                }
+            ]
+            
         }
     ]
 }
