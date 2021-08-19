@@ -1,7 +1,7 @@
 <h2>AvengersHealthPortal</h2>
 <p>Nick Fury wants to create an ONE STOP PORTAL where he can access all the general and health related information of all the Avengers.</p>
 
-<img alt="Avengers portal logo" src="src\assets\images\AHP.jpg"/>
+<a target="_blank" href="https://divyabharathimanimaran.github.io/AvengersHealthPortal"><img alt="Avengers portal logo" src="src\assets\images\AHP.jpg"/></a>
 
 <h3>Mission and vision</h3>
 <p>The story behind the construction of this portal is to facilitate his Medical team to access the health history, allergies, syndromes, etc., of each avenger, thereby enabling the provision of proper medications during an emergency.As a stepping stone to this mission, I developed a simple yet attractive and responsive web application where the Medical team can access the member's information. This is a prototype that can be used for demo purposes and is called by the name "Avengers Health Portal" (AHP).</p>
