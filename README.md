@@ -1,10 +1,12 @@
 <h2>AvengersHealthPortal</h2>
-<img alt="Avengers portal logo" src="assets/images/AHP.jpg"/>
 <p>Nick Fury wants to create an ONE STOP PORTAL where he can access all the general and health related information of all the Avengers.</p>
+
+<img alt="Avengers portal logo" src="src\assets\images\AHP.jpg"/>
+
 <h3>Mission and vision</h3>
 <p>The story behind the construction of this portal is to facilitate his Medical team to access the health history, allergies, syndromes, etc., of each avenger, thereby enabling the provision of proper medications during an emergency.As a stepping stone to this mission, I developed a simple yet attractive and responsive web application where the Medical team can access the member's information. This is a prototype that can be used for demo purposes and is called by the name "Avengers Health Portal" (AHP).</p>
 
-<p> View the prototype site here - <a href="https://divyabharathimanimaran.github.io/AvengersHealthPortal">Avengers Health Portal</a></p>
+<p> View the prototype site here - <a target="_blank" href="https://divyabharathimanimaran.github.io/AvengersHealthPortal">Avengers Health Portal</a></p>
 
 <h3>Angular features & functionalities showcased</h3>
 <ul>
@@ -16,13 +18,15 @@
 <li>Tooltip</li>
 <li>Routing</li>
 <li>Directive</li>
-<li>Subscribe(observables)</li>
+<li>Observables</li>
 <li>Flex</li>
 <li>Button</li>
 <li>Icon</li>
 </ul>
 <p>This is a web application built for exploring multiple features provided by angular and embedding them with few core functionalities.It definitely has scope of improvement up to the end of our imagination.
 </p>
+
+<hr>
 
 This project was generated with Angular CLI version 12.1.1.
 
